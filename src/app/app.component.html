@@ -1,0 +1,19 @@
+<div>
+  <ul>
+    <li *ngFor="let shopping of shoppingItems$ | async">
+  {{shopping.name}}
+    </li>
+  </ul>
+  
+  
+  <form #myform="ngForm" (ngSubmit)="addItem(myform)">
+ <div class="form-group">
+      <label for="department">Item</label>
+      <input type="text" class="form-control" ngModel name="item" id="item">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+  </div>
+  
